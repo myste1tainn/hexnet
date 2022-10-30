@@ -10,6 +10,6 @@ type ErrorResponse struct {
 	AdditionalInfo interface{} `json:"additionalInfo"`
 }
 
-func (this *ErrorResponse) Error() string {
+func (this ErrorResponse) Error() string {
 	return fmt.Sprintf("%s: %s, %s, %s", this.Code, this.Title, this.Message, this.Description)
 }
